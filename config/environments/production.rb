@@ -39,6 +39,7 @@ Rails.application.configure do
 
   # Specifies the header that your server uses for sending files.
 config.serve_static_assets = true
+config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
 #config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
 config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
