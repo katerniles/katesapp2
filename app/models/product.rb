@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
 		comments.average(:rating).to_f
 end
 def price
-	(self.price*100).to_i
+	(self.price*hundred)
 end
 end
 
