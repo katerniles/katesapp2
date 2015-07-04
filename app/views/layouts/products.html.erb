@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quality</title>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<tr class="t-row">
+  <td><%= product.name %></td>
+  <td><%= product.description %></td>
+  <td><style="width:100px"<%= product.image_url %>></td>
+  <td><%= product.colour %></td>
+  <td>$<%= product.price %></td>
+  <td><%= link_to 'Show', product %></td>
+  <td><%= link_to 'Edit', edit_product_path(product) %></td>
+  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+
+</body>
