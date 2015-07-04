@@ -1,2 +1,29 @@
 <h2>Featured Product:</h2>
-<%= @featured_product.name if @featured_product%>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col=xs-12 col-md-12 lg-col-12">
+			<div id="carousel-example-generic" class="carosel fade-carousel" data-ride="carousel" data-interval="3500">
+				<!--indicators -->
+				<ol class="carousel-indicators">
+					<li data-targe="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-targe="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-targe="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<!--slide wrapper -->
+				<%- image_tag product.image_url, :class => "img-responsive" %>
+				<div class="carousel-caption">
+					<h3><%= product.name %></h3>
+				</div>
+			<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(docment).ready(function() {
+	$('#carousel-example-generic .carousel-inner > .item:first').addClass('active');
+});
+</script>
+<!--<%= @featured_product.name if @featured_product%>
