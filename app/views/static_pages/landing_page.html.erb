@@ -14,16 +14,21 @@
 
 <!--Wrapper for slides -->
 <div class="carousel-inner" role="listbox">
-	<% @products.each do |product| %>
-	 <div class="item <%=" active" if product == @products.first %>">
-	  <%= image_tag(product.image_url, class: "img-responsive") %>
-	  <div class="carousel-caption">
-	    <%= product.name %>
-	  </div>
+	 <div class="item active">
+      <img src="http://cdn.shopify.com/s/files/1/0157/4690/products/Champion_T._Set_medium.jpg?v=1408046515" alt="Pickleball Set">
+	   <div class="carousel-caption">
+      <h3>Pickleball Sets</h3>
      </div>
+	     <% @products.each do |product| %>
+      <div class="item">
+        <%= image_tag(product.image_url) %>
+         <div class="carousel-caption">
+            <%= product.name %>
+	       </div>
+      </div>
     <% end %>
   </div>
-
+</div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
