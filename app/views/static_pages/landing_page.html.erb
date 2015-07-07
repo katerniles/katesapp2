@@ -1,43 +1,35 @@
-<div class="container-fluid">
-<h2>Featured Product:</h2>
-<%= @featured_product.name %>
-</div>
+<div class="jumbotron">
+  <div class="container-fluid">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
 
-<!--Carousel-->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#carousel-example-generic" data-slide_to="0" class="active"></li>
-		<li data-target="#carousel-example-generic" data-slide_to="1"></li>
-		<li data-target="#carousel-example-generic" data-slide_to="2"></li>
-	</ol>
-
-<!--Wrapper for slides -->
-<div class="carousel-inner" role="listbox">
-	 <div class="item active">
-      <img src="http://cdn.shopify.com/s/files/1/0157/4690/products/Champion_T._Set_medium.jpg?v=1408046515" alt="Pickleball Set">
-	   <div class="carousel-caption">
-      <h3>Pickleball Sets</h3>
-     </div>
-	     <% @products.each do |product| %>
-      <div class="item">
-        <%= image_tag(product.image_url) %>
-         <div class="carousel-caption">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <% @products.each do |product| %>
+        <div class="item<%= " active" if product == @products.first %>">
+          <p class="carousel-size"><%= image_tag(product.image_url, id: "sliding-image") %></p>
+          <div class="carousel-caption">
             <%= product.name %>
-	       </div>
+          </div>
+        </div>
+        <% end %>
       </div>
-    <% end %>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
 </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!--End of Carousel -->
