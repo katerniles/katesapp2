@@ -2,7 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-ctr">Listing Products</h1>
+<h1>Listing Products</h1>
   <div class="row">
       <table>
         <thead>
@@ -12,20 +12,21 @@
             <th>Image url</th>
             <th>Colour</th>
             <th>Price</th>
-                        <th colspan="3"></th>
+            <th colspan="3"></th>
           </tr>
         </thead>
-      <tbody id="products">
-    <% @products.each do |product| %>
-      <% cache (product) do %>
-       <%=render partial: "product", locals:{product:product} %>
-      <% end %>
-    <% end %>
-   </tbody>
-  <% end %>
- </table>
+
+        <tbody>
+          <% @products.each do |product| %>
+          <%= render @products %>
+          <% end %>
+        </tbody>
+      </table>
+
+
+      <br>
+
+      <%= link_to 'New Product', new_product_path %>
+    
+  </div>
 </div>
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
