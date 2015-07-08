@@ -12,14 +12,13 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <% @products.each do |product| %>
-        <div class="item active">
-        <%= "active" if product == @products.first %>">
+        <div class="item active"<%= "active" if product == @products.first %>">
           <p class="carousel-size"><%= image_tag(product.image_url, id: "sliding-image") %></p>
           <div class="carousel-caption">
             <%= product.name %>
           </div>
         </div>
-        <% end %>
+       <% end %>
       </div>
 
       <!-- Controls -->
@@ -31,9 +30,8 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-      <% end %>
-    <% end %>
-    </div>
+     </div>
   </div>
-<% end %>
-</div>
+
+
+
