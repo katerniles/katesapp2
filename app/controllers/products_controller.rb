@@ -1,15 +1,20 @@
 class ProductsController < ApplicationController
+  layout "static"
+  before_filter :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    render layout: "products"
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
+
   end
 
   # GET /products/new
@@ -25,7 +30,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
+    byebug
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -69,6 +74,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-       params.require(:product).permit(:name, :description, :image_url, :colour, :price)    
+      params.require(:product).permit(:name, :description, :image_url, :colour, :price)
     end
-  end
+end

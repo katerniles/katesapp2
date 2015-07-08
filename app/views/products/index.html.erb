@@ -1,3 +1,4 @@
+
 <div class="container product">
 
 <p id="notice"><%= notice %></p>
@@ -18,15 +19,15 @@
 
         <tbody>
           <% @products.each do |product| %>
-          <%= render @products %>
+          <% render @products %>
           <% end %>
-        </tbody>
+       </tbody>
       </table>
-
 
       <br>
 
       <%= link_to 'New Product', new_product_path %>
-    
+      </div>
+    </div>
   </div>
-</div>
+
