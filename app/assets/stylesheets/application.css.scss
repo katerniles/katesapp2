@@ -13,4 +13,11 @@
  *= require_tree .
  *= require_self
  */
- 
+ ul li {
+    list-style-type: none;
+}
+.carousel-caption {
+	font-size: 2em;
+	color: black;
+	font: arial;
+}
