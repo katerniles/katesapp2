@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  layout "static"
+
   before_filter :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -7,14 +7,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    render layout: "products"
+
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
-
+    @product = Product.find(params[:id])
   end
 
   # GET /products/new

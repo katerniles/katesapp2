@@ -1,7 +1,6 @@
 class Product < ActiveRecord::Base
 	has_many :orders
-	has_many :comments
-	
+
 	validates :name, presence: true
 	validates :price_in_cents, presence: true
 

@@ -4,7 +4,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
-  <div class="row">
       <table>
           <tr>
             <th>Name</th>
@@ -13,13 +12,19 @@
             <th>Colour</th>
             <th>Price</th>
           </tr>
-
           <% @products .each do |product| %>
-          <tr>
-          <% render @products %>
-          </tr>
+           <tr>
+           <td><style="width: 10em; padding-right: 1em"> <%= product.name %></td>
+           <td><style="width: 20em; padding-right: 1em"><%= product.description %></td>
+           <td><style="width: 20em; padding-right: 1em"><%= product.image_url %></td>
+           <td><style="width: 5em; padding-right: 1em"><%= product.colour %></td>
+           <td> <style="width: 5em; padding-right: 1em"><%= product.price %></td>
+           <td><style="width: 5em; padding-right: 1em"><%= link_to 'Show', product %></td>
+           <td> <style="width: 5em; padding-right: 1em"><%= link_to 'Edit', edit_product_path(product) %></td>
+           <td>  <style="width: 5em"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>           
           <% end %>
-       </tbody>
+
       </table>
 
       <br>
