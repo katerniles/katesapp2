@@ -6,16 +6,16 @@ h1 {
 	font-size: 1.2em;
 }
 p {
-	font-size: 1em;
+	font-size: 1.4em;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	line-height: 1.4;
+	line-height: 1.8;
 }
 .row {
 	background-color: transparent;
 	font-size: 1.2em;
 }
 p {
-	margin: 10%;
+	margin: 1em 10% 0 10%;
 	background-color: D3D3D3;
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; 
 }
@@ -25,4 +25,7 @@ p {
 .custom-nav {
 	background-color: black;
 	border: none;
+}
+body {
+	margin: 10%;
 }
