@@ -2,11 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
-	font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size: 1.2em;
 }
 p {
 	font-size: 20px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	line-height: 1.4;
 }
 .row {
 	background-color: transparent;
@@ -20,6 +22,6 @@ body {
 	padding: 1em 1em 1em 0;
 }
 .navbar-fixed-top {
-	background-color: transparent;
+	background-color: black;
 	border: none;
 }

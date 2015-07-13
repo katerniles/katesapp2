@@ -3,25 +3,28 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h2>Listing Products</h2>
       <table>
           <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Image url</th>
-            <th>Colour</th>
-            <th>Price</th>
+            <th style="width: 15%">Name</th>
+            <th style="width: 25%">Description</th>
+            <th style="width: 15%">Image</th>
+            <th style="width: 10%">Colour</th>
+            <th style="width: 10%">Price</th>
+            <th style="width: 15%"></th>
+            <th style="width: 15%"></th>
+            <th style="width: 15%"></th>
           </tr>
           <% @products .each do |product| %>
            <tr>
-           <td><style="width: 10em; padding-right: 1em"> <%= product.name %></td>
-           <td><style="width: 20em; padding-right: 1em"><%= product.description %></td>
-           <td><style="width: 20em; padding-right: 1em"><%= product.image_url %></td>
-           <td><style="width: 5em; padding-right: 1em"><%= product.colour %></td>
-           <td> <style="width: 5em; padding-right: 1em"><%= product.price %></td>
-           <td><style="width: 5em; padding-right: 1em"><%= link_to 'Product Details', product %></td>
-           <td> <style="width: 5em; padding-right: 1em"><%= link_to 'Edit Product', edit_product_path(product) %></td>
-           <td>  <style="width: 5em"><%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <td><%= product.name %></td>
+           <td><%= product.description %></td>
+           <td><%= image_tag(product.image_url) %></td>
+           <td><%= product.colour %></td>
+           <td><%= product.price %></td>
+           <td><%= link_to 'View Product', product %></td>
+           <td><%= link_to 'Edit Product', edit_product_path(product) %></td>
+           <td>  <%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>           
           <% end %>
 
