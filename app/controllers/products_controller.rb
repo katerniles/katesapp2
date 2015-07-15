@@ -67,6 +67,16 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  # CAPTURE search term and filter products
+def index
+  if params[:q]
+    search_term = params[:q]
+    @products = Product.where("name LIKE ?", "%#{search_term}%")
+    # return our filtered list here
+  else
+    @products = Product.all
+  end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
