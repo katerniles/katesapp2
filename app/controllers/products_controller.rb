@@ -29,9 +29,9 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    byebug
+
     respond_to do |format|
-      if @product.save
+      if @product.save(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
