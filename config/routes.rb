@@ -1,22 +1,28 @@
 Rails.application.routes.draw do
+
   resources :products do
     resources :comments
-  end
-  get 'static_pages/about'
-
-  get 'static_pages/contact'
-
-  get 'static_pages/index'
+end
+  root 'static_pages#about'
   
-  get 'static_pages/landing_page'
+  get 'contact' => 'static_pages#contact'
+
+  get 'index' => 'static_pages#index'
+  
+  get 'landing_page' => 'static_pages#landing_page'
+
+  get 'login' => 'static_pages#login'
+
+  get 'about' => 'static_pages#about'
+
+  get 'signup' => 'users#new'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'static_pages#about'
-
-  
+   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
