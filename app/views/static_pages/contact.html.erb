@@ -1,12 +1,23 @@
-<h2>Contact</h2>
-<p>Have questions?</p>
-<p>Ready to talk turkey about some special projects?</p>
-<p>Either way, we'd love to chat with you!</p>
-<h3>Contact us by </h3>
-<p style="margin-left: 2em"><strong>Phone</strong>: 269-555-5555<br>
-<strong>Email</strong>: qlgs@gmail.com</p>
-<p><strong>Or visit us at</strong></p>
-<p style="margin-left: 2em">111 W. Douglas<br>
-Niles, MI 49120</p>
+<h2>Contact Us</h2>
+<%= flash[:notice] %>
 
-<p>We'll put on a pot of coffee for you!</p>
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<%= label_tag :name, "Name" %>
+	    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+		</div>		
+		<div class="form-group">
+			<%= label_tag :email, "Email Address" %>
+			<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+		</div>
+		<div class="form-group">
+			<%= label_tag :message, "Message" %>
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+		</div>		
+	</div>
+</div> 
+<%= submit_tag "Send" %>   
+<% end %>
+
