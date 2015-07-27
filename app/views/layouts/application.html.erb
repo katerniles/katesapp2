@@ -19,7 +19,9 @@
 
 
 <body data-spy="scroll" data-target=".navbar">
-    
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  
     <!-- Begin Navigation Bar -->
     <nav class="navbar navbar-inverse navbar-fixed-top custom-nav" role="navigation">
 
@@ -48,23 +50,31 @@
               <li style="font-size:1.2em"><%= link_to 'About', about_path %></li>
               <li style="font-size:1.2em"><%= link_to 'Products', products_path %></li>
               <li style="font-size:1.2em"><%= link_to 'Contact', contact_path %></li>
-              <li style="font-size:1.2em"><%= link_to "Login", login_path %>
             </ul> 
           </div>
       </div> 
       </div>
       </div> 
+      </ul>
+          <% if user_signed_in? %>
+           <li style="margin-left: 90%"; "color: white">
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+          </li>
+          <% else %>
+          <li style="margin-left: 90%"; "color: white">
+          <%= link_to('Login', new_user_session_path)  %>  
+          </li>
+        <% end %>
         <ul>
-                    <li style="margin-left: 60%"; list-style-type: "none:>
+              <li style="margin-left: 70%"; list-style-type: "none:>
                 <%= form_tag("/products", method: "get") do %>
-                  <%= label_tag(:q, "Search for:") %>
                   <%= text_field_tag(:q) %>
                   <%= submit_tag("Product Search") %>
                 <% end %>
               </li> 
-              </ul>
-    </nav> <!-- End Nav -->
 
+
+    </nav> <!-- End Nav -->
 
 
 <%= yield %>
