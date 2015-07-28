@@ -36,3 +36,10 @@
 		</div>
   </div>
 </div>
+<p id="show-comment">
+<%= render 'new_comment' %>
+</p>
+<%= render 'comments' %>
+<p>
+<%= will_paginate @comments %>
+</p>
