@@ -1,19 +1,21 @@
 class ProductsController < ApplicationController
-
-  before_filter :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name ILIKE ?", "%#{search_term}%")
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @product = Product.find(params[:id])
+    @comments = @product.comments.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /products/new
@@ -31,8 +33,8 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     respond_to do |format|
-      if @product.save(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+      if @product.save
+        format.html { redirect_to products_path, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -60,23 +62,10 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-#      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
- # Example of redirect:
-  format.html { redirect_to @product, notice: 'Are you crazy? You know how long this took me?' }
-
+      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
-  # CAPTURE search term and filter products
-def index
-  if params[:q]
-    search_term = params[:q]
-    @products = Product.where("name LIKE ?", "%#{search_term}%")
-    # return our filtered list here
-  else
-    @products = Product.all
-  end
-end
 
   private
     # Use callbacks to share common setup or constraints between actions.

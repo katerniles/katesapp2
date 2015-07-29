@@ -1,9 +1,0 @@
-<tr>
-  <td><%= product.name %></td>
-  <td><%= product.description %></td>
-  <td><img src="<%= product.image_url %>" id="image"></td>  
-  <td><%= product.colour %></td>
-  <td><%= link_to 'Product Details', product %></td>
-  <td><%= link_to 'Edit Product', edit_product_path(product) %></td>
-  <td><%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</tr>

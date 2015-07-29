@@ -1,45 +1,40 @@
-<p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p>
 
-<div class="container product">
-  <div class="row" style= "background-color: transparent">
-    <div class="col-md-7 pull-right" style="padding-top: 1em">
-		<p>
-		  <strong>Name:</strong>
-		  <%= @product.name %>
-		</p>
+	<p id="show-image">
+		<img src="<%= @product.image_url %>" height="200" width="100">
+	</p>
 
-		<p>
-		  <strong>Description:</strong>
-		  <%= @product.description %>
-		</p>
+	<p id="show-name">
+	  <!-- Product Name -->
+	  <%= @product.name %>
+	</p>
 
-		<p>
-		  <!--<strong>Image url:</strong> -->
-		  <img src= "<%= @product.image_url %>">
-		</p>
+	<p id="show-description">
+	  <%= @product.description %>
+	</p>
 
-		<p>
-		  <strong>Colour:</strong>
-		  <%= @product.colour %>
-		</p>
-		<p>
-		  <strong>Price: $</strong>
-		  <%= @product.price %>
-		</p>
+	<p id="show-info">
+	  <strong>Color:</strong>
+	  <%= @product.colour %>
+
+	  <strong>Price:</strong>
+	  <%= @product.price %>
+	</p>
+	<br>
+
+	<p id="show-rating"> 
+		Average Rating:
+	</p> <br>
+<div class="rated" id="show-rating" data-score="<%= @product.average_rating %>"></div>
+
+	<p id="show-comment">
+		<%= render 'new_comment' %>
+	</p>
+		<%= render 'comments' %>
+	<p>
+		<%= will_paginate @comments %>
+	</p>
+</div>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
-			
-			</div>
-			</div>
-		</div>
-		</div>
-  </div>
-</div>
-<p id="show-comment">
-<%= render 'new_comment' %>
-</p>
-<%= render 'comments' %>
-<p>
-<%= will_paginate @comments %>
-</p>

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  resources :users
   resources :products do
     resources :comments
 end
+  resources :users
+  resources :orders, only: [:index, :show, :new, :create]
+
   root 'static_pages#about'
   
   get 'contact' => 'static_pages#contact'
