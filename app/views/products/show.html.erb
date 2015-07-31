@@ -1,17 +1,17 @@
 	<p id="notice"><%= notice %></p>
 
 	<p id="show-image">
-		<img src="<%= @product.image_url %>" height="200" width="100">
+	<img src="<%= @product.image_url %>" height="300" width="400">
 	</p>
-
+<div id="show-format">
 	<p id="show-name">
-	  <!-- Product Name -->
+  <!-- Product Name -->
 	  <%= @product.name %>
-	</p>
+	</p><br>
 
 	<p id="show-description">
 	  <%= @product.description %>
-	</p>
+	</p><br>
 
 	<p id="show-info">
 	  <strong>Color:</strong>
@@ -26,7 +26,7 @@
 		Average Rating:
 	</p> <br>
 <div class="rated" id="show-rating" data-score="<%= @product.average_rating %>"></div>
-
+<end>
 	<p id="show-comment">
 		<%= render 'new_comment' %>
 	</p>
