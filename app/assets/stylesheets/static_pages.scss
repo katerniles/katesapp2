@@ -1,0 +1,28 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 1.2em;
+}
+.row {
+	background-color: transparent;
+	font-size: 1.2em;
+}
+p {
+	margin: 1em 10% 0 10%;
+	background-color: D3D3D3;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 1.4em;
+ 	line-height: 1.6em;
+}
+.navbar li {
+	padding: 1em 1em 1em 0;
+}
+.custom-nav {
+	border: solid black;
+}
+body {
+	margin: 10%;
+}
+

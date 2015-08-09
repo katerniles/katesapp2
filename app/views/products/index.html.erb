@@ -1,0 +1,37 @@
+
+<div class="container product">
+
+<p id="notice"><%= notice %></p> 
+
+<h2>Listing Products</h2>
+      <table>
+          <tr>
+            <th style="width: 15%">Name</th>
+            <th style="width: 25%">Description</th>
+            <th style="width: 15%">Image</th>
+            <th style="width: 10%">Color</th>
+            <th style="width: 10%">Price</th>
+            <th colspan="3"></th>
+          </tr>
+          <% @products .each do |product| %>
+           <tr>
+           <td><%= product.name %></td>
+           <td><%= product.description %></td>
+           <td><%= image_tag(product.image_url) %></td>
+           <td><%= product.colour %></td>
+           <td><%= product.price %></td>
+           <td><%= link_to 'View Product', product %></td>
+           <td><%= link_to 'Edit Product', edit_product_path(product) %></td>
+           <td>  <%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure you want to delete your comment?' } %></td>
+          </tr>           
+          <% end %>
+
+      </table>
+
+      <br>
+
+      <strong><%= link_to 'Add New Product', new_product_path %></strong>
+      </div>
+    </div>
+  </div>
+

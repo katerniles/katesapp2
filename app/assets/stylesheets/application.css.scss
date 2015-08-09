@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ ul li {
+    list-style-type: none;
+}
+.carousel-caption {
+	font-size: 2em;
+	color: black;
+	font: arial;
+}
+p {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+table {
+	background-color: lightblue;
+	font-size: 1.2em;
+}
+.rated {
+	width: 8%;
+	margin: 0 0 0 10%;
+}
+#comment_body.form-control {
+	height: 10em;
+	width: 100%;
+	resize: none;
+}
+
+.rating {
+	margin: 0.5em 0 1em 0;
+	width: 100px;
+}

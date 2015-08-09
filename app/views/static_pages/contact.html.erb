@@ -1,0 +1,23 @@
+<h2>Contact Us</h2>
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<%= label_tag :name, "Your Name" %>
+	    <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+		</div>		
+		<div class="form-group">
+			<%= label_tag :email, "Your Email Address" %>
+			<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+		</div>
+		<div class="form-group">
+			<%= label_tag :message, "How Can We be of Assistance?" %>
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+		</div>		
+	</div>
+</div> 
+<%= submit_tag "Send" %>   
+<% end %>
+

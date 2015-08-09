@@ -1,0 +1,24 @@
+<section class="product">
+  <div class="row">
+    <div class="col-xs-12 col-md-5 col-md-offset-1">
+      <h2><%= product.name %></h2>
+
+      <p>Average Rating: <span class="rated" data-score="<%= product.average_rating %>"></span> </p>
+
+      <p>Color: <%= product.colour %></p>
+      <p> Price: <%= @product.price %></p>
+      <p>
+        <%=h truncate(product.description, length: 200, omission: " ", separator: " ") { link_to "more...", product } %>
+      </p>
+      <div class="btn-group btn-group-xs" role="group" aria-label="...">
+        <%= link_to 'Show', product, class: "btn btn-default" %>
+        <%= link_to 'Edit', edit_product_path(product),class: "btn btn-default" %>
+        <!-- <a href="#" id="description" class="btn btn-default toggleDesc">Description</a> -->
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-5">
+      <%= image_tag(product.image_url, class:"img-responsive img-product", alt: "image not found" ) %>
+    </div>
+  </div>
+</section>
