@@ -1,7 +1,11 @@
 
 <div class="container product">
 
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p> 
+=======
+<p id="notice"><%= notice %></p>
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 
 <h2>Listing Products</h2>
       <table>
@@ -9,7 +13,11 @@
             <th style="width: 15%">Name</th>
             <th style="width: 25%">Description</th>
             <th style="width: 15%">Image</th>
+<<<<<<< HEAD
             <th style="width: 10%">Color</th>
+=======
+            <th style="width: 10%">Colour</th>
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
             <th style="width: 10%">Price</th>
             <th colspan="3"></th>
           </tr>
@@ -22,7 +30,11 @@
            <td><%= product.price %></td>
            <td><%= link_to 'View Product', product %></td>
            <td><%= link_to 'Edit Product', edit_product_path(product) %></td>
+<<<<<<< HEAD
            <td>  <%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure you want to delete your comment?' } %></td>
+=======
+           <td>  <%= link_to 'Delete Product', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
           </tr>           
           <% end %>
 

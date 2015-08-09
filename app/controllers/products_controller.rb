@@ -5,8 +5,13 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:q]
+<<<<<<< HEAD
       search_term = params[:q] 
       @products = Product.where("name LIKE ?", "%#{search_term}%")
+=======
+      search_term = params[:q]
+      @products = Product.where("name ILIKE ?", "%#{search_term}%")
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
     else
       @products = Product.all
     end
@@ -15,7 +20,11 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+<<<<<<< HEAD
     @comments = @product.comments.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
+=======
+    @comments = @product.comments.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   end
 
   # GET /products/new
@@ -35,7 +44,11 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.save
         format.html { redirect_to products_path, notice: 'Product was successfully created.' }
+<<<<<<< HEAD
         format.json { render :index, status: :created, location: @product }
+=======
+        format.json { render :show, status: :created, location: @product }
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
       else
         format.html { render :new }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -75,6 +88,10 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
+<<<<<<< HEAD
       params.require(:product).permit(:name, :description, :image_url, :color, :price)
+=======
+      params.require(:product).permit(:name, :description, :image_url, :colour, :price)
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
     end
 end

@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+<<<<<<< HEAD
   load_and_authorize_resource
+=======
+  load_and_athorize_resource
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   # GET /users
   # GET /users.json
   def index
@@ -10,7 +14,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+<<<<<<< HEAD
     @user = User.find(params[:id])
+=======
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   end
 
   # GET /users/new
@@ -26,6 +33,10 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+<<<<<<< HEAD
+=======
+    @user = User.find(params[:user][:user_id])
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 
     respond_to do |format|
       if @user.save

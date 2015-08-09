@@ -12,7 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 //= require jquery.raty
 //= require ratyrate
 //= require_tree .
 
+=======
+//= require turbolinks
+//= require_tree .
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f

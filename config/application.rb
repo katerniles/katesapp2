@@ -22,6 +22,9 @@ module Katesapp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+<<<<<<< HEAD
     config.assets.initialize_on_precompile = false
+=======
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   end
 end

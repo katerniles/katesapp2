@@ -17,4 +17,7 @@
 /tmp
 
 public/assets/**
+<<<<<<< HEAD
 .bundle
+=======
+>>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
