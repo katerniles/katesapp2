@@ -286,7 +286,7 @@ DEPENDENCIES
   capybara
   coffee-rails
   devise
-  factory_girl_rails (~> 4.5.0)
+  factory_girl_rails
   figaro
   guard
   guard-rspec
