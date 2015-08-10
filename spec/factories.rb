@@ -16,25 +16,14 @@ FactoryGirl.define do
 
     factory :product_full_profile do
       description "Oak"
-      image_url "/images/tree.jpg"
+      image_url "/images/oak.jpg"
       colour "green"
-      price "17.95" 
     end
 
   end
 
   factory :comment do # product has_many comments: each comment belongs_to a product
-    body "blah blah blah"
-    rating "5"
-    product
+    body "Test"
+    rating "4"
   end
-
-  factory :order do
-    user_id "1"
-    product_id "1"
-    total "100"
-  end
-
-
-
 end
