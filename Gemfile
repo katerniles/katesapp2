@@ -62,7 +62,7 @@ gem "will_paginate", "~> 3.0.4"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-<<<<<<< HEAD
+HEAD
 group :development, :test do 
 	gem 'sqlite3'
   gem 'factory_girl_rails'
@@ -80,8 +80,9 @@ group :test do
 end
 
 group :production do
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 	gem 'pg'
-	gem 'rails_12factor'
 end
 
 group :doc do 
