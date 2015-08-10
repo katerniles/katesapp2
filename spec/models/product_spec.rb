@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 describe Product do 
@@ -37,11 +36,11 @@ describe Product do
         user = create :user
          # build is equivalent to .new
          # create is equivalent to .new and then save
-        subject.comments << build(:comment, rating: 2, user: user)
-        subject.comments << build(:comment, rating: 5, user: user)
         subject.comments << build(:comment, rating: 1, user: user)
+        subject.comments << build(:comment, rating: 2, user: user)
         subject.comments << build(:comment, rating: 3, user: user)
         subject.comments << build(:comment, rating: 4, user: user)
+        subject.comments << build(:comment, rating: 5, user: user)
         subject.save!
       end  
 
@@ -52,12 +51,6 @@ describe Product do
 
   end  
     
-  describe '#orders' do
-    it 'can have orders' do
-      expect(subject).to respond_to(:orders)
-    end  
-  end 
-
    describe '#comments' do
     it 'can have comments' do
       expect(subject).to respond_to(:comments)
