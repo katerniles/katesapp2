@@ -36,13 +36,13 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec', require: false
-  gem "spork-rails"
+  gem 'spork-rails'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'guard-spork'
 end
 
 group :test do
   gem 'capybara'
-
 end
 
 group :production do
@@ -66,5 +66,4 @@ group :development, :test do
 
    #Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem "factory_girl_rails", '~> 4.0'
   end
