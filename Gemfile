@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -34,13 +33,11 @@ gem "figaro"
 
 group :development, :test do 
   gem 'sqlite3'
-  gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec', require: false
   gem "spork-rails"
   gem 'guard-spork'
-  gem 'spork'
 end
 
 group :test do
@@ -54,8 +51,11 @@ group :production do
 end
 
 group :doc do 
-  gem 'sdoc', require: false
+  gem 'sdoc'
 end
+
+  # Use ActiveModel has_secure_password
+  gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
