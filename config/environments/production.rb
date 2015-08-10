@@ -23,21 +23,14 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-<<<<<<< HEAD
   config.serve_static_assets = true
-=======
-
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
-<<<<<<< HEAD
-=======
 
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
@@ -45,14 +38,10 @@ Rails.application.configure do
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.
-<<<<<<< HEAD
+
+  config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
   #config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-=======
-config.serve_static_assets = true
-config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
-#config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
-config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -60,11 +49,7 @@ config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
-<<<<<<< HEAD
   config.assets.debug = true
-=======
-
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
@@ -93,11 +78,9 @@ config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-<<<<<<< HEAD
   # heroku 
   # Note to set this for your host
   config.action_mailer.default_url_options = { :host => 'http://coffeeandmore.herokuapp.com' }
 
-=======
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
+
 end

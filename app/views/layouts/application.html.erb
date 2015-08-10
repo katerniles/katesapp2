@@ -11,30 +11,20 @@
   <%= csrf_meta_tags %>
 </head>
 
-<<<<<<< HEAD
-<body style="padding-top: 12em">
-=======
-<body style="margin-top: 14em">
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
+
+<body style="margin-top: 17em">
 
 <img src="https://scontent-sea1-1.xx.fbcdn.net/hphotos-ash2/v/t1.0-9/547154_512038738809831_1807830533_n.jpg?oh=71b83f0d7b835d819b21f0ebede3e817&oe=561917E4" alt="Quality Lettering and Graphics" align-left padding-top: 2em; style="width: 25%">
 <h2>Your Local Source for Signs and Graphics</h2>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 <body data-spy="scroll" data-target=".navbar">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   
     <!-- Begin Navigation Bar -->
-<<<<<<< HEAD
+
     <nav class="navbar navbar navbar-fixed-top custom-nav" role="navigation" style="background-color: lightgray">
-=======
-    <nav class="navbar navbar-inverse navbar-fixed-top custom-nav" role="navigation">
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
+
 
       <div class="container-fluid">    
     
@@ -67,7 +57,7 @@
       </div>
       </div> 
       </ul>
-<<<<<<< HEAD
+<
       <ul>
       <li style="margin-left: 70%"; list-style-type: "none:>
         <%= form_tag("/products", method: "get") do %>
@@ -80,29 +70,11 @@
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
           </li>
           <% else %>
-          <li style="margin: 0 5% 0 80%; background-color: darkgray; border-radius:  1em;text-align: center;">
-          <%= link_to('Login', new_user_session_path)  %>  
-          </li>
-        <% end %>
-
-=======
-          <% if user_signed_in? %>
-           <li style="margin-left: 90%"; "color: white">
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-          </li>
-          <% else %>
-          <li style="margin-left: 90%"; "color: white">
+          <li style="margin: 0 5% 0 80%; background-color: darkgray; border-radius:  1em; text-align: center;">
           <%= link_to('Login', new_user_session_path)  %>  
           </li>
         <% end %>
         <ul>
-              <li style="margin-left: 70%"; list-style-type: "none:>
-                <%= form_tag("/products", method: "get") do %>
-                  <%= text_field_tag(:q) %>
-                  <%= submit_tag("Product Search") %>
-                <% end %>
-              </li> 
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 
 
     </nav> <!-- End Nav -->

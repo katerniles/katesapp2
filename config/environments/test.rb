@@ -1,11 +1,7 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-<<<<<<< HEAD
+  # Settings specified here will take precedence over those in config/application.rb.<<<<<<< HEAD
   config.gem "rspec", :lib => false, :version => ">= 1.2.0"
   config.gem "rspec-rails", :lib => false, :version => ">= 1.2.0"
-=======
-
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -44,11 +40,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-<<<<<<< HEAD
   
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.default_url_options = { :host => 'localhost:5000' }
-=======
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
+
 end
