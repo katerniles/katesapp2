@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-<<<<<<< HEAD
     before_filter :authenticate_user!
 
 def create
@@ -13,26 +12,13 @@ def create
       else
         format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
-=======
 
-  def create
-  	@product = Product.find(params[:product_id])
-  	@comment = @product.comments.new(comment_params)
-  	@comment.user = current_user
-  	respond_to do |format|
-      if @comment.save
-        format.html {redirect_to @product, notice: 'Review was created successfully.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html {redirect_to @product, notice: 'Review was not saved successfully.' }
-        format.json { render json: @comment.errors, status: :unprocessable_untity }
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
       end
     end
   end
 
   def destroy
-<<<<<<< HEAD
+
       @comment = Comment.find(params[:id])
       product = @comment.product
       @comment.destroy
@@ -40,13 +26,6 @@ def create
       redirect_to product
     end
     
-=======
-    @comment = Comment.find(params[:id])
-    product = @comment.product
-    @comment.destroy
-    redirect_to product
-  end
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 
   private
   	def comment_params

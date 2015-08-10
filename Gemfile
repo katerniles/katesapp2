@@ -1,21 +1,11 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
 ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
 # gem 'therubyracer', platforms: :ruby
-gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
-gem 'turbolinks'
-gem 'jbuilder'
 gem 'bootstrap-sass'
-gem 'devise'
-gem 'cancancan'
 gem 'rolify'
 gem 'ratyrate'
 gem 'hirb'
@@ -24,12 +14,11 @@ gem 'stripe'
 gem "figaro"
 
 
-=======
 gem 'cancancan'
 gem 'devise'
 ruby '2.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
 gem 'sqlite3'
@@ -49,10 +38,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem "will_paginate", "~> 3.0.4" 
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -62,9 +48,8 @@ gem "will_paginate", "~> 3.0.4"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-HEAD
+
 group :development, :test do 
-	gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
   gem 'guard'
@@ -82,15 +67,12 @@ end
 group :production do
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-	gem 'pg'
 end
 
 group :doc do 
 	gem 'sdoc', require: false
 end
 
-=======
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -101,8 +83,6 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-<<<<<<< HEAD
-=======
 
 group :production do
 	gem 'rails_12factor'
@@ -110,4 +90,3 @@ group :production do
 end
 
 
->>>>>>> 2442c3f1abaffd1eb2c72e16d78c488d164d6e1f
