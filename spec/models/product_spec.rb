@@ -1,13 +1,32 @@
 require 'rails_helper'
 
-RSpec.describe Product, type: :model do 
-  before do
-    @product = Product.create(name: "Tree")
-    end
+describe Product, type: :model do 
 
-    subject { @product }
+  context "name description, image URL, color, and price"
 
-    it "should return name" do
+    before { @product = FactoryGirl.build(:product)}
+  
+      it "should return name" do
         expect(@product.name).to eq "Tree"
       end
-end
+
+      it "should return description" do
+        expect(@product.description).to eq "Oak"
+      end
+
+      it "should return image URL" do
+        expect(@product.image_url).to eq "/images/tree.jpg"
+      end
+
+      it "should return color" do
+        expect(@product.colour).to eq "green"
+      end
+
+      it "should return price" do
+        expect(@product.price).to eq "17.95"
+      end
+    end
+
+
+
+
