@@ -18,8 +18,8 @@
     </p>
 
     <p>
-      <strong>Price:</strong>
-      <%= @product.price_in_cents %>
+      <strong>Price: $</strong>
+      <%= @product.price %>
     </p>
 
     <p>
@@ -27,8 +27,7 @@
 <div>
     <%= form_tag "/payments/create" do %>
       <%= render partial: "shared/stripe_checkout_button" %>
-    <% end %>
-</div>
+    <% end %></div>
     </div>
 
     <div class="col-xs12 col-md-6">
