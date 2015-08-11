@@ -3,8 +3,8 @@ require 'rails_helper'
 describe ProductsController, :type => :controller do
 
 	before do
-		@user = create(:user)
-		@product = create(:product) 
+		@user = build(:user)
+		@product = build(:product) 
 		end
 
 	describe "GET #index" do
