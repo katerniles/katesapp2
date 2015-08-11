@@ -1,4 +1,9 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :news, :class => 'New' do
+    name "MyString"
+email "MyString"
+login "MyString"
+  end
+
   
   factory :user do
     email "kate@blurb.com"
