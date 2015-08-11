@@ -1,48 +1,51 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-6">
     <p>
-      <strong style = "font-size: 2em">
-      <%= @product.name %>
-      </strong>
+      <strong><%= @product.name %></strong>
     </p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-
     <p>
-      <strong>Color:</strong>
-      <%= @product.colour %>
+      Description: <%= @product.description %>
     </p>
-
     <p>
-      <strong>Price: $</strong>
-      <%= @product.price %>
+      Color: <%= @product.colour %>
     </p>
-
     <p>
-      <strong>Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-<div>
-    <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-    <% end %></div>
-    </div>
-
-    <div class="col-xs12 col-md-6">
-      <p>
-        <%= image_tag(@product.image_url, id: ("product_image"), height: '300')%>
-      </p>
-    </div>
-  </div>
-
-    <%= render 'new_comment' %>
-    <br/>
-    <%= render 'comments' %>
-    <p> 
-      <%= will_paginate @comments %>
+    <%= image_tag(@product.image_url, id: ("product_image"))%>
     </p>
+    <p>
+      Price: $<%= @product.price %>
+    </p>
+<br>
+    <p>
+      Average Rating: <div class="rated" data-score="<%= @product.average_rating %>">
+    </div></p>
+
+<br/>
+<%= render 'new_comment' %>
+<br/>
+<%= render 'comments' %>
+<p> <%= will_paginate @comments %></p>
+
+
+<%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Amount: $<%= @product.price %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Your Purchase"
+          data-amount="<%= @product.price_in_cents %>"></script>
+<% end %> 
+</div>
+</div>
+</div>
+
+
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %></li>
+<%= link_to 'Back', products_path %>

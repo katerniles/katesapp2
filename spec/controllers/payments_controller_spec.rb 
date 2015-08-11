@@ -1,0 +1,5 @@
+require 'rails_helper'
+2	
+3	RSpec.describe PaymentsController, type: :controller do
+4	
+5	end

@@ -9,6 +9,9 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
 </head>
 
 
@@ -76,8 +79,6 @@
         <% end %>
         <ul>
     </nav> <!-- End Nav -->
-<div class="content">
 <%= yield %>
-</div>
 </body>
 </html>
