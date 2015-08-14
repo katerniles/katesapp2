@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to main_app.root_url, :alert => exception.message
   end
+    rescue_from ActionController::InvalidAuthenticityToken do |exception|
+    sign_out_user # Example method that will destroy the user cookies
+  end
   def after_sign_in_path_for(resource)
   	# return the path based on resource
     byebug

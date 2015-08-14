@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user = UserMailer.welcome_email
+    @user = UserMailer.welcome_email(@user).deliver unless @user.invalid?
     @user = User.find(params[:user][:user_id])
 
     respond_to do |format|
