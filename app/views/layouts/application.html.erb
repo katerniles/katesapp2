@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Quality</title>
+  <img src="https://scontent-sea1-1.xx.fbcdn.net/hphotos-ash2/v/t1.0-9/547154_512038738809831_1807830533_n.jpg?oh=71b83f0d7b835d819b21f0ebede3e817&oe=561917E4" alt="Quality Lettering and Graphics" align= "left"; style="width: 15%"; "padding-top: -7em">
+
 
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -13,12 +15,9 @@
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 </head>
 
-
 <body style="margin-top: 14em">
 
-<img src="https://scontent-sea1-1.xx.fbcdn.net/hphotos-ash2/v/t1.0-9/547154_512038738809831_1807830533_n.jpg?oh=71b83f0d7b835d819b21f0ebede3e817&oe=561917E4" alt="Quality Lettering and Graphics" align-left padding-top: 2em; style="width: 25%">
-<h2>Your Local Source for Signs and Graphics</h2>
-
+<h2 style = "margin-left: 20%">Your Local Source for Signs and Graphics</h2>
 <body data-spy="scroll" data-target=".navbar">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
@@ -77,7 +76,9 @@
           </li>
         <% end %>
         <ul>
-    </nav> <!-- End Nav -->
+    </nav> <!-- End Nav --><hr>
 <%= yield %>
+<hr>
+
 </body>
 </html>
