@@ -68,7 +68,7 @@
         <% end %>
       </li> 
           <% if user_signed_in? %>
-           <li style="margin: 0 5% 0 80%; background-color: darkgray; border-radius: 1em;text-align: center;">
+           <li style="margin: 0 5% 0 80%; background-color: red; border-radius: 1em; text-align: center;">
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
           </li>
           <% else %>

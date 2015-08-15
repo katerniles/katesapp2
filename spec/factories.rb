@@ -4,17 +4,6 @@ email "MyString"
 login "MyString"
   end
 
-  
-  factory :user do
-    email "kate@blurb.com"
-    password "987654321"
-
-    factory :user_full_profile do
-      first_name "Kate"
-      last_name "Russell"
-    end 
-
-  end 
 
   factory :product do
     name "Tree"
