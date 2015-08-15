@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
 def new
-  byebug
+#  byebug
 end
 
 def create
