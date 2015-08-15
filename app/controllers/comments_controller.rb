@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-    
+load_and_authorize_resource 
+skip_authorize_resource :only => [:index, :show]
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
