@@ -22,6 +22,7 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem "figaro"
 gem 'brakeman', '~> 3.0.5'
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'rack-ssl', :require => 'rack/ssl'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -54,9 +55,7 @@ end
 group :doc do 
   gem 'sdoc'
 end
-group :development do
-   gem "thin"
-end
+
   # Use ActiveModel has_secure_password
   gem 'bcrypt', '~> 3.1.7'
 

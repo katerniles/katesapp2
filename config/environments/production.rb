@@ -44,9 +44,11 @@ Rails.application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  katesapp::Application.configure do
+  
+  Katesapp::Application.configure do
     config.force_ssl = true
   end
+end
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
