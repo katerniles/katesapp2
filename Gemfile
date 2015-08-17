@@ -39,6 +39,7 @@ group :development, :test do
   gem 'spork-rails'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'guard-spork'
+  gem 'byebug'
 end
 
 group :test do
@@ -53,7 +54,9 @@ end
 group :doc do 
   gem 'sdoc'
 end
-
+group :development do
+   gem "thin"
+end
   # Use ActiveModel has_secure_password
   gem 'bcrypt', '~> 3.1.7'
 
