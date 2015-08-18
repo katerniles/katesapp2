@@ -84,6 +84,6 @@ end
   # heroku 
   # Note to set this for your host
   config.action_mailer.default_url_options = { :host => 'http://coffeeandmore.herokuapp.com' }
-
-
 end
+end
+
